@@ -1,6 +1,6 @@
-import "../assets/css/galeria.css";
-import Card from './Card';
-import useData from '../hooks/useData';
+import "../assets/css/galeria.css"
+import Card from './Card'
+import useData from '../hooks/useData'
 
 export default function Home () {
   const { data } = useData()
