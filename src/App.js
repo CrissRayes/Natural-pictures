@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.css"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -6,8 +6,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Favoritos from "./views/Favoritos";
 
-export default function App() {
-  const endpoint = "/fotos.json";
+export default function App () {
 
   return (
     <div className="App">
@@ -15,8 +14,8 @@ export default function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favoritos" element={<Favoritos />} />
+          <Route path="/" element={ <Home /> } />
+          <Route path="/favoritos" element={ <Favoritos /> } />
         </Routes>
       </BrowserRouter>
     </div>
