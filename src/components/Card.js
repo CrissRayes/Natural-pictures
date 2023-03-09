@@ -1,21 +1,24 @@
 import Heart from "./Heart";
+
+/*
+todo: agregar un estado para saber si la imagen esta likeada o no
+todo: poner heart sobre la imagen
+todo: cambiar color de heart si la imagen esta likeada
+todo: corregir tamaño de la imagen
+todo: poner texto sobre la imagen
+
+*/
 const Card = ( { id, src, alt, liked } ) => {
   return (
     <div
-      className='card mb-4 shadow-sm mx-auto'
-      style={ { width: '18rem' } }
+      className='foto'
+      style={ { backgroundImage: `url(${src})` } }
     >
-      <Heart />
-      <img
-        className='card-img-top'
-        src={ src }
-        alt={ alt }
-        style={ { height: '10rem' } }
+      <Heart
+        filled={ true }
       />
-      <div className='card-body'>
-        <h5 className='card-title'>{ alt }</h5>
-      </div>
-    </div>
+      <span>{ alt }</span>
+    </div >
   )
 }
 

@@ -1,6 +1,7 @@
 .galeria {
   display: grid;
-  gap: 10px;
+  gap: 20px;
+  margin: 0 10rem;
 }
 
 .grid-columns-5 {
