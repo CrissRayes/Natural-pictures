@@ -1,41 +1,32 @@
 import Heart from "./Heart"
-import { useState, useContext, useEffect } from 'react'
+import { useContext, useState } from 'react'
 import MyContext from '../my_context'
 
-const Card = ( { id, src, alt } ) => {
+const Card = ( { id, src, alt, liked } ) => {
 
   const { favorites, setFavorites } = useContext( MyContext )
   const [isLiked, setIsLiked] = useState( false )
 
-  const handleFavorite = () => {
-    handleLike()
-    addFavorite()
-  }
+  const handleLiked = () => {
 
-  const handleLike = () => {
-    isLiked ? setIsLiked( false ) : setIsLiked( true )
-  }
-
-  const addFavorite = () => {
-    const newFavorite = { id, src, alt }
-    // si el id del favorito ya existe, no lo agregamos, sino, lo agregamos a favoritos
-    const isFavorite = favorites.some( favorite => favorite.id === id )
-    if ( !isFavorite ) {
-      setFavorites( [...favorites, newFavorite] )
+    if ( !isLiked ) {
+      setIsLiked( true )
+      setFavorites( [...favorites, { id, src, alt, liked }] )
     } else {
-      const newFavorites = favorites.filter( favorite => favorite.id !== id )
-      setFavorites( newFavorites )
+      setIsLiked( false )
+      setFavorites( favorites.filter( favorite => favorite.id !== id ) )
     }
+
   }
 
   return (
     <div
       className='foto'
       style={ { backgroundImage: `url(${src})` } }
-      onClick={ handleFavorite }
+      onClick={ handleLiked }
     >
       <Heart
-        filled={ isLiked }
+        filled={ liked }
       />
       <span>{ alt }</span>
     </div >

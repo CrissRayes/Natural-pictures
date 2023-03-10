@@ -14,7 +14,11 @@ export default function Favoritos () {
         { favorites.map( image => (
           <Card
             key={ image.id }
-            { ...image }
+            // { ...image }
+            id={ image.id }
+            src={ image.src }
+            alt={ image.alt }
+            liked={ true }
           /> ) ) }
       </div>
     </div>

@@ -8,6 +8,7 @@ const getData = async () => {
       id: photo.id,
       alt: photo.alt,
       src: photo.src.large,
+      liked: photo.liked
     } ) )
 
   return images
