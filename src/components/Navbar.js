@@ -1,10 +1,20 @@
 import "../assets/css/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar () {
   return (
     <nav className="navbar">
-      <Link to="/"> Home </Link> | <Link to="/favoritos"> Favoritos </Link>
+      <NavLink
+        to="/"
+        className={ ( { isActive } ) => isActive ? "active" : "" }
+      >
+        Home
+      </NavLink> |
+      <NavLink
+        to="/favoritos"
+        className={ ( { isActive } ) => isActive ? "active" : "" }
+      > Favoritos
+      </NavLink>
     </nav>
   );
 }
