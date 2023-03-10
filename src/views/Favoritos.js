@@ -14,7 +14,6 @@ export default function Favoritos () {
         { favorites.map( image => (
           <Card
             key={ image.id }
-            // { ...image }
             id={ image.id }
             src={ image.src }
             alt={ image.alt }
