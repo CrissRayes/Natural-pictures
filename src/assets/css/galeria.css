@@ -26,6 +26,20 @@
   text-shadow: 0px 0px 15px black;
 }
 
+.galeria .fotoFavorita {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: left;
+  text-shadow: 0px 0px 15px black;
+}
+
 .galeria .foto:hover {
   box-shadow: 0px 0px 2px 1px black;
 }
