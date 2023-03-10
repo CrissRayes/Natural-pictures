@@ -11,6 +11,7 @@ export default function Home () {
 
   // Maneja el estado de favoritos, si ya existe lo elimina, si no existe lo agrega
   const handleFavorites = ( id ) => {
+    // const newFavorites un if expresado como ternario y asignado a una constante
     const newFavorites = favorites.some( favorite => favorite.id === id )
       ? favorites.filter( favorite => favorite.id !== id )
       : [...favorites, data.find( image => image.id === id )]
