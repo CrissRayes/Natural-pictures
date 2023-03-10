@@ -7,12 +7,15 @@ import MyContext from './my_context'
 import { useState } from 'react'
 
 export default function App () {
-  const [favoritos, setFavoritos] = useState( [] ) // los favoritos son un array de objetos
-  const globalState = { favoritos, setFavoritos } // creamos un objeto con los favoritos y la función para modificarlos
+  const [favorites, setFavorites] = useState( [] )
+  const favoriteState = { favorites, setFavorites }
+
+
+
 
   return (
     <div className="App">
-      <MyContext.Provider value={ globalState }> {/* envolvemos todo el árbol de componentes con el contexto */ }
+      <MyContext.Provider value={ favoriteState }>
         <BrowserRouter>
           <Navbar />
           <Routes>
