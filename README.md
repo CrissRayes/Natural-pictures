@@ -1,4 +1,4 @@
-# Desafío useContext
+# Proyecto Natural Pictures
 
 - Proyecto creado con `npx create-react-app`
 
