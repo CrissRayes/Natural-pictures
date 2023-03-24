@@ -11,7 +11,7 @@ export default function Favoritos () {
   return (
     <div>
       <h1>Fotos favoritas</h1>
-      <div className="p-3 galeria grid-columns-4">
+      <div className="galeria-favoritos">
         {/* Itera sobre el array de favoritos y renderiza un CardFavorites por cada imagen */ }
         { favorites.map( image => (
           <CardFavorites
